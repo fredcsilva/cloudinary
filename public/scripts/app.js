@@ -1,15 +1,6 @@
 var CLOUDNARY_URL = 'https://api.cloudinary.com/v1_1/diosclkgv'
 var CLOUDNARY_UPLOAD_PRESENT = 'tcpkhue8'
 
-/*
-const config: CloudinaryConfiguration = {
-    cloud_name: 'xxx',
-    api_key: 'xxx',
-    api_secret: 'xxx-xxx',
-    upload_preset: 'xxx'
-  }
-  */
-
 var imagePreview = document.getElementById('img-preview')
 var fileUpload = document.getElementById('file-upload')
 
