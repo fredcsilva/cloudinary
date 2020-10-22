@@ -35,13 +35,8 @@ fileUpload.addEventListener('change', function(event){
     axios({
         url: CLOUDNARY_URL,
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin' : '*',
-        },
+        mode: 'no-cors',      
         data: formData,
-		crossdomain: true,
     }).then(function(res){
         console.log(res)
         imagePreview.src = res.data.secure_url;
