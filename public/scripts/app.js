@@ -12,7 +12,14 @@ fileUpload.addEventListener('change', function(event){
 
     fetch(CLOUDNARY_URL, {
         method: 'POST',
-        body: formData
+        body: formData,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            'Access-Control-Request-Headers': 'accept, content-type',
+            'Access-Control-Request-Method': 'POST'
+        },
       })
       .then(response => response.json())
       .then(data => {
@@ -40,4 +47,3 @@ fileUpload.addEventListener('change', function(event){
     });
     */
 });
-
