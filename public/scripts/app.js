@@ -9,7 +9,7 @@ fileUpload.addEventListener('change', function(event){
     var formData = new FormData()
     formData.append('file', file)
     formData.append('upload_present', CLOUDNARY_UPLOAD_PRESENT)
-
+/*
     fetch(CLOUDNARY_URL, {
         method: 'POST',
         body: formData,
@@ -28,8 +28,9 @@ fileUpload.addEventListener('change', function(event){
           }
       })
       .catch(err => console.error(err));
+      */
 
-      /*
+      
     axios({
         url: CLOUDNARY_URL,
         method: 'POST',
@@ -37,6 +38,8 @@ fileUpload.addEventListener('change', function(event){
             'Content-Type': 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Origin' : '*',
             'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            'Access-Control-Request-Headers': 'accept, content-type',
+            'Access-Control-Request-Method': 'POST'
         },
         data: formData
     }).then(function(res){
@@ -45,5 +48,5 @@ fileUpload.addEventListener('change', function(event){
     }).catch(function(err){
         console.error(err)
     });
-    */
+    
 });
