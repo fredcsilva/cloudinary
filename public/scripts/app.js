@@ -14,7 +14,9 @@ fileUpload.addEventListener('change', function(event){
         url: CLOUDNARY_URL,
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         },
         data: formData
     }).then(function(res){
