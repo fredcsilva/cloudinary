@@ -25,7 +25,7 @@ fileUpload.addEventListener('change', function(event){
             console.log(data.secure_url)
           }
       })
-      .catch(err => console.error(err))
+      .catch(err => console.error(err));
 
       /*
     axios({
@@ -45,9 +45,3 @@ fileUpload.addEventListener('change', function(event){
     });
     */
 });
-
-
-handleImageUpload(file) {
-
-
-  }
