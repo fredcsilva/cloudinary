@@ -20,6 +20,7 @@ fileUpload.addEventListener('change', function(event){
             'Access-Control-Request-Headers': 'accept, content-type',
             'Access-Control-Request-Method': 'POST'
         },
+        mode: 'no-cors'
       })
       .then(response => response.json())
       .then(data => {
@@ -34,14 +35,13 @@ fileUpload.addEventListener('change', function(event){
     axios({
         url: CLOUDNARY_URL,
         method: 'POST',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Origin' : '*',
-            'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            'Access-Control-Request-Headers': 'accept, content-type',
-            'Access-Control-Request-Method': 'POST'
         },
-        data: formData
+        data: formData,
+		crossdomain: true,
     }).then(function(res){
         console.log(res)
         imagePreview.src = res.data.secure_url;
